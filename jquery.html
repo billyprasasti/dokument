@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Latihan Jquery</title>
+</head>
+<body>
+ 	<button type="button" id="btn_klik"> klick saya</button>
+ 	<button type="button" class="btn_klik2"> klick saya</button>
+ 	<button type="button" class="btn_klik3"> klick saya</button>
+
+ 	<a href="#">sebuah link</a>
+
+ 	<button type="button" id="btn_hide"> TOMBOL HIDE</button>
+ 	<button type="button" id="btn_show"> TOMBOL SHOW</button>
+ 	<h1 id="h1_hide_and_show">sebuah Text</h1>
+ 	<select name="select_change" id="select_change">
+ 		<option value="laki-laki">laki-laki</option>
+ 		<option value="perempuan">perempuan</option>
+ 	</select>
+
+<!-- penggunaan dasar jquery : $ (selector).event(action); -->
+ 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<!-- untuk ngebaca id btn klik -->
+ 	
+ 	<script type="text/javascript">
+ 		/*$("#btn_klik").click(function(){
+ 			alert("klik berhasil");
+ 		});*/
+
+ 	/*untuk ngebaca class btn_klik3*/
+
+ 		/*$("#btn_klik").click(function(){
+ 			alert("klik berhasil");
+ 		});	*/
+
+/*untuk ngebca apapun yg berhubungan dengan button*/
+ 		/*$("button").click(function(){
+ 			alert("klik berhasil");
+ 		});*/
+ 		/*document.getElementById("btn_klik").onclick= function(){
+ 			alert("klik berhasil!");
+ 		}*/
+
+ 		$("#select_change").change(function(){
+ 			var jeniskelamin = $('#select_change').val();
+ 			alert(jeniskelamin);
+ 			alert("Drowpdown berhasil di ubah menjadi " + jeniskelamin);
+ 		});
+ 		// $("#select_change").change(function(){
+ 		// 	alert("dropdown berhasil diubah");
+ 		// });
+
+ 		$("#btn_hide").dblclick(function(){
+ 			$("#h1_hide_and_show").hide();
+ 		});
+
+ 		$("#btn_show").click(function(){
+ 			$("#h1_hide_and_show").show();
+ 		});
+ 		$("#btn_klik").click(function(){
+ 			alert("klik dengan id berhasil");
+ 		});
+ 		$("a").click(function(){
+ 			alert("klik dengan id berhasil");
+ 		});
+ 	</script>	
+</body>
+</html>
